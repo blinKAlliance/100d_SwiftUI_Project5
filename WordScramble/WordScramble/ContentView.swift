@@ -85,6 +85,8 @@ struct ContentView: View {
     
     func startGame() {
         usedWords = []
+        score = 0
+        
         if let startWordsURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             if let startWords = try? String(contentsOf: startWordsURL) {
                 let allWords = startWords.components(separatedBy: "\n")
